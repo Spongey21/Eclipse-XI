@@ -1,0 +1,32 @@
+.information {
+    margin: 15rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+}
+
+.information__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+    width: 500px;
+
+    text-align: center;
+
+    padding-left: 1rem;
+}
+
+.information__icon {
+    color:  var(--very-light-purple);
+
+    font-size: 30px;
+}
+
+.information__text {
+    color: var(--very-light-purple);
+}
