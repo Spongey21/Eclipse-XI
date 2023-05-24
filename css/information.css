@@ -2,23 +2,36 @@
     margin: 15rem 0;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    gap: 3rem;
+    gap: 5rem;
+}
+
+.information__heading {
+    color: var(--very-light-purple);
+}
+
+.information__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .information__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     
-    width: 500px;
+    width: 300px;
 
     text-align: center;
 
-    padding-left: 1rem;
+    padding-left: 1rem;     
 }
 
 .information__icon {
