@@ -1,4 +1,4 @@
-.popup {
+.login {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -13,11 +13,11 @@
     background-position: 100%;
 }
 
-.popup::backdrop {
+.login::backdrop {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.popup__container {
+.login__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,12 +27,12 @@
     height: 100%;
 }
 
-.popup__img {
+.login__img {
     max-height: 250px;
     max-width: 250px;
 }
 
-.popup__username, .popup__password {
+.login__username, .login__password {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +41,7 @@
     width: 40%;
 }
 
-.popup__label {
+.login__label {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 20px;
@@ -49,14 +49,14 @@
     color: var(--very-light-purple);
 }
 
-.popup__input {
+.login__input {
     height: 2rem;
     width: 100%;
 
     padding: 0.5rem;
 }
 
-.popup__actions {
+.login__actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -65,7 +65,7 @@
     width: 40%;
 }
 
-.popup__login, .popup__register, .popup__forgot {
+.login__login, .login__register, .login__forgot {
     cursor: pointer;
 
     font-family: 'Times New Roman', Times, serif;
@@ -73,7 +73,7 @@
     font-size: 16px;
 }
 
-.popup__login {
+.login__login {
     padding: 0.5rem 2rem;
 
     background-color: black;
@@ -83,7 +83,7 @@
     border-radius: 0.5rem;
 }
 
-.popup__register, .popup__forgot {
+.login__register, .login__forgot {
     background-color: transparent;
     border: none;
 }
