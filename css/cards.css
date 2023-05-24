@@ -1,0 +1,38 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    height: 80vh;
+}
+
+.cards__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('https://picsum.photos/200');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 1rem;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    text-decoration: none;
+    color: var(--very-light-purple);
+
+    transition: transform 1s ease;
+}
+
+.cards__card:hover {
+    transform: scale(1.1);
+}
+
