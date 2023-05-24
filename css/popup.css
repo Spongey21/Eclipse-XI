@@ -1,0 +1,85 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+    height: 80%;
+
+    background-image: url('/assets/dddepth-345.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+
+.popup__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    height: 100%;
+}
+
+.popup__img {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.popup__username, .popup__password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 40%;
+}
+
+.popup__label {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+
+    color: var(--very-light-purple);
+}
+
+.popup__input {
+    height: 2rem;
+    width: 100%;
+
+    padding: 0.5rem;
+}
+
+.popup__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+
+    width: 40%;
+}
+
+.popup__login, .popup__register, .popup__forgot {
+    cursor: pointer;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.popup__login {
+    padding: 0.5rem 2rem;
+
+    background-color: black;
+    color: var(--very-light-purple);
+
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.popup__register, .popup__forgot {
+    background-color: transparent;
+    border: none;
+}

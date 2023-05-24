@@ -17,11 +17,29 @@
             <ul class="navigationHeader__list">
                 <li><a href="./" class="navigationHeader__item">System</a></li>
                 <li><a href="#info" class="navigationHeader__item">Info</a></li>
-                <li><a href="./" class="navigationHeader__item">Login</a></li>
+                <li><button class="navigationHeader__item credentials">Login</button></li>
             </ul>
         </nav>
     </header>
     <main>
+        <dialog class="popup">
+            <div class="popup__container">
+                <img class="popup__img" src="https://www.nicepng.com/png/full/201-2014472_marisol-estrella-circle.png" alt="default_pfp">
+                <section class="popup__username">
+                    <label class="popup__label" for="username">Username:</label>
+                    <input class="popup__input" type="text" name="username" placeholder="Username..">
+                </section>
+                <section class="popup__password">
+                    <label class="popup__label" for="password">Password:</label>
+                    <input class="popup__input" type="text" name="password" placeholder="Password..">
+                </section>
+                <section class="popup__actions">
+                    <button class="popup__login">Login</button>
+                    <button class="popup__register">Register</button>
+                    <button class="popup__forgot">Forgot Password</button>
+                </section>
+            </div>
+        </dialog>
         <div class="cards">
             <section class="cards__card">
                 <a class="cards__link" href="./">Solar System</a>
@@ -32,7 +50,7 @@
                 <img class="cards__img" src="https://wallpaperaccess.com/full/1216317.png" alt="Info">
             </section>
             <section class="cards__card">
-                <button class="cards__button">Login/Register</button>
+                <button class="cards__button credentials">Login/Register</button>
                 <img class="cards__img" src="https://img.freepik.com/premium-photo/print-minimalist-3d-rendering-blue-purple-blue-navy-blue-darker-abstract-wallpaper_551880-760.jpg?w=360" alt="Credentials">
             </section>
         </div>
@@ -62,6 +80,7 @@
             </article>
         </div>
     </main>
+    <script src="./js/credentials.js"></script>
     <script src="./js/burgermenu.js"></script>
     <script src="./script.js"></script>
 </body>

@@ -2,6 +2,7 @@
 @import url('./css/navigationHeader.css');
 @import url('./css/cards.css');
 @import url('./css/information.css');
+@import url('./css/popup.css');
 
 :root {
     --primary-font-size: 16;
