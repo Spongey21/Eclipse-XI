@@ -56,6 +56,14 @@
     width: 100%;
 }
 
+.burgerMenu {
+    display: none;
+
+    font-size: 30px;
+
+    color: beige;
+}
+
 @media screen and (max-width: 800px) {
     .navigationHeader__list {
         display: none;
@@ -74,5 +82,9 @@
         border: 1px solid black;
 
         background: linear-gradient(to right, var(--dark-purple), var(--purple))
+    }
+
+    .burgerMenu {
+        display: block;
     }
 }
