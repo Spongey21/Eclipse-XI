@@ -1,13 +1,9 @@
 const credentials = (function() {
-    function openAndClosePopup(el) {
-        if (el.open) {
-            el.close()
-        } else {
-            el.showModal()
-        }
+    function isOpen(popup) {
+        return popup.open ? true : false
     }
 
     return {
-        openAndClosePopup
+        isOpen
     }
 })()
