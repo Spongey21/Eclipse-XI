@@ -1,10 +1,9 @@
 const menu = (function() {
     function toggle(element) {
-        console.log(element.style.display);
         if (element.style.display == 'flex') {
-            element.style.display = ''
+            return true
         } else {
-            element.style.display = 'flex'
+            return false
         }
     }
 

@@ -13,6 +13,12 @@ const REGISTER_INPUTS = document.querySelectorAll('.register__input')
 
 BURGERMENU.addEventListener('click', function (e) {
     menu.toggle(MENU)
+
+    if (menu.toggle(MENU)) {
+        MENU.style.display = ''
+    } else {
+        MENU.style.display = 'flex'
+    }
 })
 
 LOGIN_BTNS.forEach(function (btn) {
