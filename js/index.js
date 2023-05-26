@@ -1,9 +1,9 @@
+// login and register
+const CLOSE_MENU = document.querySelectorAll('.login__close, .register__close')
+
 // burgermenu
 const MENU = document.querySelector('.navigationHeader__list')
 const BURGERMENU = document.querySelector('.burgerMenu')
-
-// login and register
-const CLOSE_MENU = document.querySelectorAll('.login__close, .register__close')
 
 // login
 const LOGIN_BTNS = document.querySelectorAll('.credentials')
@@ -23,11 +23,7 @@ function openPopup() {
 }
 
 BURGERMENU.addEventListener('click', function (e) {
-    if (menu.toggle(MENU)) {
-        MENU.style.display = ''
-    } else {
-        MENU.style.display = 'flex'
-    }
+    MENU.classList.toggle('show')
 })
 
 LOGIN_BTNS.forEach(function (btn) {
