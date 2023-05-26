@@ -12,8 +12,6 @@ const REGISTER_REGISTER = document.querySelector('.register__register')
 const REGISTER_INPUTS = document.querySelectorAll('.register__input')
 
 BURGERMENU.addEventListener('click', function (e) {
-    menu.toggle(MENU)
-
     if (menu.toggle(MENU)) {
         MENU.style.display = ''
     } else {
