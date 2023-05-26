@@ -1,4 +1,5 @@
 const credentials = (function() {
+    // allows only letters and numbers
     const NumbersAndLettersOnly = /[^\d\p{L}]/u
 
     function usernameVerify(username) {
@@ -25,9 +26,16 @@ const credentials = (function() {
         }
     }
 
+    function login(username, password) {
+        if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     return {
-        usernameVerify,
-        passwordVerify,
-        register
+        register,
+        login
     }
 })()
