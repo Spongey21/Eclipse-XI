@@ -3,35 +3,19 @@ const credentials = (function() {
     const NumbersAndLettersOnly = /[^\d\p{L}]/u
 
     function usernameVerify(username) {
-        if (!NumbersAndLettersOnly.test(username) && username.length >= 2) {
-            return true
-        } else {
-            return false
-        }
+        return !NumbersAndLettersOnly.test(username) && username.length >= 2
     }
 
     function passwordVerify(password, repeatPw) {
-        if (!NumbersAndLettersOnly.test(password) && password == repeatPw && password.length >= 8) {
-            return true
-        } else {
-            return false
-        }
+       return !NumbersAndLettersOnly.test(password) && password == repeatPw && password.length >= 8
     }
 
     function register(username, password, repeatPW) {
-        if (usernameVerify(username) && passwordVerify(password, repeatPW)) {
-            return true
-        } else {
-            return false
-        }
+        return usernameVerify(username) && passwordVerify(password, repeatPW)
     }
 
     function login(username, password) {
-        if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
-            return true
-        } else {
-            return false
-        }
+        return username == localStorage.getItem('username') && password == localStorage.getItem('password')
     }
 
     return {
