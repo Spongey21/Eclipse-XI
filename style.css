@@ -3,6 +3,7 @@
 @import url('./css/cards.css');
 @import url('./css/information.css');
 @import url('./css/credentials.css');
+@import url('./css/profile.css');
 
 :root {
     --primary-font-size: 16;
