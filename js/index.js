@@ -1,9 +1,9 @@
-// login and register
-const CLOSE_MENU = document.querySelectorAll('.login__close, .register__close')
-
 // burgermenu
 const MENU = document.querySelector('.navigationHeader__list')
 const BURGERMENU = document.querySelector('.burgerMenu')
+
+// login and register
+const CLOSE_MENU = document.querySelectorAll('.login__close, .register__close')
 
 // login
 const LOGIN_BTNS = document.querySelectorAll('.credentials')
