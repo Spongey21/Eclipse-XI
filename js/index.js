@@ -2,10 +2,10 @@
 const MENU = document.querySelector('.navigationHeader__list')
 const BURGERMENU = document.querySelector('.burgerMenu')
 
-// login and register
+// login- and register menu
 const CLOSE_MENU = document.querySelectorAll('.login__close, .register__close')
 
-// login
+// login menu
 const LOGIN_BTNS = document.querySelectorAll('.credentials')
 const LOGIN_MENU = document.querySelector('.login')
 const LOGINREGISTER_BTN = document.querySelector('.login__register')
@@ -13,13 +13,20 @@ const LOGIN_CONTAINER = document.querySelector('.login__container')
 const LOGIN_LOGIN = document.querySelector('.login__login')
 const LOGIN_INPUTS = document.querySelectorAll('.login__input')
 
-// register
+// register menu
 const REGISTER_MENU = document.querySelector('.register')
 const REGISTER_REGISTER = document.querySelector('.register__register')
 const REGISTER_INPUTS = document.querySelectorAll('.register__input')
 
 function openPopup() {
     LOGIN_MENU.showModal()
+}
+
+// checks if user is logged in
+if (localStorage.getItem('username') != null) {
+    LOGIN_BTNS[0].textContent = 'Profile'
+} else {
+    LOGIN_BTNS[0].textContent = 'Login'
 }
 
 BURGERMENU.addEventListener('click', function (e) {
