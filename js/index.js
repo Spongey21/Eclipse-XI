@@ -22,19 +22,12 @@ function openPopup() {
     LOGIN_MENU.showModal()
 }
 
-// checks if user is logged in
-if (localStorage.getItem('username') != null) {
-    LOGIN_BTNS[0].textContent = 'Profile'
-} else {
-    LOGIN_BTNS[0].textContent = 'Login'
-}
-
 BURGERMENU.addEventListener('click', function (e) {
     MENU.classList.toggle('show')
 })
 
-LOGIN_BTNS.forEach(function (btn) {
-    btn.addEventListener('click', openPopup)
+LOGIN_BTNS.forEach(function (item) {
+    item.addEventListener('click', openPopup)
 })
 
 
@@ -64,6 +57,15 @@ REGISTER_REGISTER.addEventListener('click', function() {
     }
 })
 
+// checks if user is logged in
+if (localStorage.getItem('username') != null) {
+    LOGIN_BTNS[0].textContent = 'Profile'
+    LOGIN_BTNS[0].href = '/profile.html'
+    LOGIN_BTNS[0].removeEventListener('click', openPopup)
+} else {
+    LOGIN_BTNS[0].textContent = 'Login'
+}
+
 LOGIN_LOGIN.addEventListener('click', function() {
     // validates the login info and then convert the same html element into a profile element
     if (credentials.login(LOGIN_INPUTS[0].value, LOGIN_INPUTS[1].value)) {
@@ -71,10 +73,7 @@ LOGIN_LOGIN.addEventListener('click', function() {
 
         LOGIN_BTNS[0].textContent = 'Profile'
         LOGIN_BTNS[0].removeEventListener('click', openPopup)
-
-        LOGIN_BTNS[0].addEventListener('click', function() {
-            window.location.href = './profile.html'
-        })
+        LOGIN_BTNS[0].href = '/profile.html'
     } else {
         console.log('wrong pass');
     }

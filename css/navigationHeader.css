@@ -42,9 +42,6 @@
 
     cursor: pointer;
     
-    background-color: transparent;
-    border: none;
-
     transition: color 1s ease;
 }
 
