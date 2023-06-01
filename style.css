@@ -4,6 +4,7 @@
 @import url('./css/information.css');
 @import url('./css/credentials.css');
 @import url('./css/profile.css');
+@import url('./css/slider.css');
 
 :root {
     --primary-font-size: 16;
