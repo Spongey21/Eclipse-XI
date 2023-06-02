@@ -25,14 +25,16 @@
         <dialog class="login login--backgroundImage">
             <span class="login__close">X</span>
             <div class="login__container">
-                <img class="login__img" src="https://www.nicepng.com/png/full/201-2014472_marisol-estrella-circle.png" alt="default_pfp">
+                <img class="login__img" src="https://www.nicepng.com/png/full/201-2014472_marisol-estrella-circle.png"
+                    alt="default_pfp">
                 <section class="login__username">
                     <label class="login__label" for="login-username">Username:</label>
                     <input class="login__input" id="login-username" type="text" name="username" placeholder="Username..">
                 </section>
                 <section class="login__password">
                     <label class="login__label" for="login-password">Password:</label>
-                    <input class="login__input" id="login-password" type="password" name="password" placeholder="Password..">
+                    <input class="login__input" id="login-password" type="password" name="password"
+                        placeholder="Password..">
                 </section>
                 <section class="login__actions">
                     <button class="login__login">Login</button>
@@ -45,36 +47,41 @@
             <div class="register__container">
                 <section class="register__name">
                     <label class="register__label" for="register-username">Username:</label>
-                    <input class="register__input" id="register-username" type="text" name="username" placeholder="Username.." required>
+                    <input class="register__input" id="register-username" type="text" name="username"
+                        placeholder="Username.." required>
                 </section>
                 <section class="register__password">
                     <label class="register__label" for="register-password">Password:</label>
-                    <input class="register__input" id="register-password" type="password" name="password" placeholder="Password.." required>
+                    <input class="register__input" id="register-password" type="password" name="password"
+                        placeholder="Password.." required>
                 </section>
                 <section class="register__repeatPassword">
                     <label class="register__label" for="register-repeatPassword">Repeat:</label>
-                    <input class="register__input" id="register-repeatPassword" type="password" name="repeatPassword" placeholder="Repeat Password.." required>
+                    <input class="register__input" id="register-repeatPassword" type="password" name="repeatPassword"
+                        placeholder="Repeat Password.." required>
                 </section>
-                    <button class="register__register">Register</button>
+                <button class="register__register">Register</button>
             </div>
         </dialog>
         <article class="slider">
-            <dialog class="slider__transaction">
-                <h1 class="slider__loading">Loading</h1>
-            </dialog>
+            <h1 class="slider__owner">Owner</h1>
             <button class="slider__btnBack">&lt;</button>
             <button class="slider__btnForward">&gt;</button>
             <canvas class="slider__planet"></canvas>
-            <div class="slider__pointer"></div>
-            <div class="slider__options">
-                <h2 class="slider__population">Population: 2000</h2>
+            <section class="slider__pointer"></section>
+            <section class="slider__options">
+                <h2 class="slider__population">Population</h2>
                 <button class="slider__buy">BUY</button>
-                <h2 class="slider__resources">ResourceList</h2>
-            </div>
+                <details class="slider__resources">
+                    <summary class="slider__resourceText">Resources</summary>
+                  </details>
+            </section>
         </article>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/system.js"></script>
+    <script src="./js/credentials.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

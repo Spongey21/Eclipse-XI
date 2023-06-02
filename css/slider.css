@@ -11,8 +11,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    text-align: center;
+
     width: 500px;
     height: 500px;
+}
+
+.slider__owner {
+    grid-row: 1;
+    grid-column: 2/3;
 }
 
 .slider__planet {
@@ -48,7 +55,7 @@
 }
 
 .slider__planet, .slider__btnBack, .slider__btnForward {
-    grid-row: 1/2;
+    grid-row: 2/3;
 }
 
 .slider__pointer {
@@ -59,12 +66,25 @@
     gap: 1rem;
 
     grid-column: 2;
+    grid-row: 3;
 }
 
 input[type="radio"] {
     accent-color: purple;
     height: 1rem;
     width: 1rem;
+}
+
+.slider__owner, .slider__population, .slider__resources {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+    color: var(--very-light-purple);
+}
+
+.slider__population, .slider__resources {
+    width: 20vw;
 }
 
 .slider__options {
@@ -74,22 +94,12 @@ input[type="radio"] {
     gap: 2rem;
 
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 4;
 
-    padding-right: 2.5rem;
+    width: 100%;
+    height: 10rem;
 
-    margin: 1rem;
-}
-
-.slider__transaction {
-    background-color: var(--dark-gray);
-
-    padding: 15rem 30rem;
-
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 10rem;
 }
 
 .slider__buy {

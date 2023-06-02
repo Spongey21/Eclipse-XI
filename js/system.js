@@ -5,39 +5,66 @@ const POINTER = document.querySelector('.slider__pointer');
 
 const TRANSACTION = document.querySelector('.slider__transaction')
 const BUY_BTN = document.querySelector('.slider__buy')
+const OWNER = document.querySelector('.slider__owner')
+const POPULATION = document.querySelector('.slider__population')
+const RESOURCES = document.querySelector('.slider__resources')
 
 const planets = []
 
 planets.push(
   {
-    planet: createPlanet('/assets/textures/moon.jpg', (Math.random() * 10) + 10),
+    planet: createPlanet('/assets/textures/moon.jpg', 10),
     name: 'Moon',
     population: 10,
-    owner: 'Jeff'
+    owner: 'Jeff',
+    resourceList: [
+      'Iron',
+      'Gold',
+    ]
   },
   {
-    planet: createPlanet('/assets/textures/earth.jpg', (Math.random() * 10) + 10),
+    planet: createPlanet('/assets/textures/earth.jpg', 12),
     name: 'Earth',
-    population: 82000,
-    owner: 'James'
+    population: 820,
+    owner: 'James',
+    resourceList: [
+      'Iron',
+      'Gold',
+      'Diamond'
+    ]
   },
   {
-    planet: createPlanet('/assets/textures/jupiter.jpg', (Math.random() * 10) + 10),
+    planet: createPlanet('/assets/textures/jupiter.jpg', 20),
     name: 'Jupiter',
     population: 0,
-    owner: 'Ben'
+    owner: 'Ben',
+    resourceList: [
+      'Cobalt',
+      'Ruthenium',
+      'Iron'
+    ]
   },
   {
-    planet: createPlanet('/assets/textures/mars.webp', (Math.random() * 10) + 10),
+    planet: createPlanet('/assets/textures/mars.webp', 16),
     name: 'Mars',
-    population: 10000,
-    owner: 'Kevin'
+    population: 100,
+    owner: 'Kevin',
+    resourceList: [
+      'Iron',
+      'Gold',
+      'Diamond'
+    ]
   },
   {
-    planet: createPlanet('/assets/textures/lava.jpg', (Math.random() * 10) + 10),
+    planet: createPlanet('/assets/textures/lava.jpg', 25),
     name: 'Lava',
     population: 50,
-    owner: 'Stacy'
+    owner: 'Stacy',
+    resourceList: [
+      'Palladium',
+      'Iridium',
+      'Osmium'
+    ]
   },
 )
 
@@ -82,17 +109,33 @@ function animate() {
 
 animate();
 
-SLIDER.INIT(planets, scene, POINTER)
+SLIDER.INIT(planets, scene, POINTER, OWNER, POPULATION, RESOURCES)
 
-SLIDER.BTN_FORWARD(FORWARD, planets, POINTER);
+SLIDER.BTN_FORWARD(FORWARD, planets, POINTER, OWNER, POPULATION, RESOURCES);
 
-SLIDER.BTN_BACK(BACK, planets, POINTER);
+SLIDER.BTN_BACK(BACK, planets, POINTER, OWNER, POPULATION, RESOURCES);
 
 SLIDER.keyPress(FORWARD, BACK)
 
-BUY_BTN.addEventListener('click', function() {
-  BUY_BTN.style.backgroundColor = 'green'
-  BUY_BTN.textContent = '✓'
-
-  // set owner of planet
-})
+if (localStorage.getItem('username')) {
+  BUY_BTN.addEventListener('click', function () {
+    // stores who owns the planet after its been bought
+    let planetIndex = planets.map(function (planet) {
+      return planet.name
+    }).indexOf(localStorage.getItem('currentPlanet'));
+  
+    OWNER.textContent = 'Owner: ' + localStorage.getItem('username')
+    planets[planetIndex].owner = localStorage.getItem('username')
+  
+    // indication that user has bought the planet
+    BUY_BTN.style.backgroundColor = 'green'
+    BUY_BTN.textContent = '✓'
+  
+    setTimeout(() => {
+      BUY_BTN.style.backgroundColor = 'lightgray'
+      BUY_BTN.textContent = 'BUY'
+    }, 500);
+  })
+} else {
+  BUY_BTN.textContent = 'Login!'
+}
