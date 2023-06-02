@@ -13,7 +13,7 @@ const planets = []
 
 planets.push(
   {
-    planet: createPlanet('/assets/textures/moon.jpg', 10),
+    planet: createPlanet('./ECLIPSE-XI/assets/texture/moon.jpg', 10),
     name: 'Moon',
     population: 10,
     owner: 'Jeff',
@@ -23,7 +23,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('/assets/textures/earth.jpg', 12),
+    planet: createPlanet('../assets/textures/earth.jpg', 12),
     name: 'Earth',
     population: 820,
     owner: 'James',
@@ -34,7 +34,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('/assets/textures/jupiter.jpg', 20),
+    planet: createPlanet('../assets/textures/jupiter.jpg', 20),
     name: 'Jupiter',
     population: 0,
     owner: 'Ben',
@@ -45,7 +45,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('/assets/textures/mars.webp', 16),
+    planet: createPlanet('../assets/textures/mars.webp', 16),
     name: 'Mars',
     population: 100,
     owner: 'Kevin',
@@ -56,7 +56,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('/assets/textures/lava.jpg', 25),
+    planet: createPlanet('../assets/textures/lava.jpg', 25),
     name: 'Lava',
     population: 50,
     owner: 'Stacy',
