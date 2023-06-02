@@ -13,7 +13,7 @@ const planets = []
 
 planets.push(
   {
-    planet: createPlanet('./ECLIPSE-XI/assets/texture/moon.jpg', 10),
+    planet: createPlanet('https://t4.ftcdn.net/jpg/03/09/04/59/360_F_309045980_zKAgyd8feCR69CMWQ1PlhCHhteODo9zd.jpg', 10),
     name: 'Moon',
     population: 10,
     owner: 'Jeff',
@@ -23,7 +23,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('../ECLIPSE-XI/assets/textures/earth.jpg', 12),
+    planet: createPlanet('https://t3.ftcdn.net/jpg/01/96/89/34/360_F_196893434_tE0PIrFSWibtYTYbRSTqYvyvZ893O6L7.webp', 12),
     name: 'Earth',
     population: 820,
     owner: 'James',
@@ -34,7 +34,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('ECLIPSE-XI/assets/textures/jupiter.jpg', 20),
+    planet: createPlanet('https://garden.spoonflower.com/c/2693600/p/f/l/t0YlfrZ4rOc3mcqRLiLHh4TBRdIlf-yb8Q-DhC5_r8ap2-NF4Cy8NIQf/Map%20of%20Jupiter.jpg', 20),
     name: 'Jupiter',
     population: 0,
     owner: 'Ben',
@@ -45,7 +45,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('assets/textures/mars.webp', 16),
+    planet: createPlanet('https://media.istockphoto.com/id/488156684/photo/alien-planet-with-craters-4.jpg?s=612x612&w=0&k=20&c=Yi8aOsN6UWT2yqzTqJ_z9qwymTKIGyFNUXsBJkjVPNk=', 16),
     name: 'Mars',
     population: 100,
     owner: 'Kevin',
@@ -56,7 +56,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('../assets/textures/lava.jpg', 25),
+    planet: createPlanet('https://media.istockphoto.com/id/1392423909/vector/abstract-background-magma.jpg?s=612x612&w=0&k=20&c=aHq5dCTtL6nXOGY4msYL69HkfLKKm5ClW1qAT2nqKEg=', 25),
     name: 'Lava',
     population: 50,
     owner: 'Stacy',
@@ -78,7 +78,7 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 50;
 
-scene.background = new THREE.TextureLoader().load( '/assets/textures/background.jpg' )
+scene.background = new THREE.TextureLoader().load( 'https://images.unsplash.com/photo-1657215339554-6f1badb08453?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzNzI4MTI1OXx8ZW58MHx8fHx8&w=1000&q=80' )
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
