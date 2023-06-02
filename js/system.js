@@ -23,7 +23,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('../assets/textures/earth.jpg', 12),
+    planet: createPlanet('../ECLIPSE-XI/assets/textures/earth.jpg', 12),
     name: 'Earth',
     population: 820,
     owner: 'James',
@@ -34,7 +34,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('../assets/textures/jupiter.jpg', 20),
+    planet: createPlanet('ECLIPSE-XI/assets/textures/jupiter.jpg', 20),
     name: 'Jupiter',
     population: 0,
     owner: 'Ben',
@@ -45,7 +45,7 @@ planets.push(
     ]
   },
   {
-    planet: createPlanet('../assets/textures/mars.webp', 16),
+    planet: createPlanet('assets/textures/mars.webp', 16),
     name: 'Mars',
     population: 100,
     owner: 'Kevin',
