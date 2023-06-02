@@ -76,7 +76,7 @@ input[type="radio"] {
 }
 
 .slider__owner, .slider__population, .slider__resources {
-    font-size: 24px;
+    font-size: var(--primary-font-size);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 

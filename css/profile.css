@@ -1,6 +1,8 @@
 .profileInfo {
-    height: 100vh;
+    height: 50vh;
     width: 100%;
+
+    margin: 5rem;
 
     display: flex;
     justify-content: center;
@@ -36,7 +38,7 @@
 
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: var(--primary-font-size);
 }
 
 .profileInfo__revealPassword {
@@ -51,4 +53,40 @@
 
 .profileInfo__revealPassword:hover {
     transform: scale(0.9);
+}
+
+@media screen and (max-width: 800px) {
+    .profileInfo {
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 0;
+
+        width: 100%;
+    }
+
+    .profileInfo__info {
+        text-align: center;
+    }
+
+    .profileInfo__picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profileInfo__password {
+        gap: 0;
+
+        width: 100%;
+    }
+
+    .profileInfo__revealPassword {
+        font-size: var(--secondary-font-size);
+
+        padding: 0.1;
+    }
+
+    .profileInfo__username, .profileInfo__passwordText, .profileInfo__creationDate {
+        font-size: var(--secondary-font-size);
+    }
 }
